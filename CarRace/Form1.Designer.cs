@@ -30,6 +30,7 @@ namespace CarRace
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -126,7 +127,7 @@ namespace CarRace
             // mainCar
             // 
             this.mainCar.BackColor = System.Drawing.Color.Transparent;
-            this.mainCar.Image = global::CarRace.Properties.Resources.blueCar;
+            this.mainCar.Image = ((System.Drawing.Image)(resources.GetObject("mainCar.Image")));
             this.mainCar.Location = new System.Drawing.Point(29, 275);
             this.mainCar.Name = "mainCar";
             this.mainCar.Size = new System.Drawing.Size(38, 56);
@@ -161,7 +162,8 @@ namespace CarRace
             this.LblGameOver.AutoSize = true;
             this.LblGameOver.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.LblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGameOver.Location = new System.Drawing.Point(75, 145);
+            this.LblGameOver.ForeColor = System.Drawing.Color.Red;
+            this.LblGameOver.Location = new System.Drawing.Point(66, 154);
             this.LblGameOver.Name = "LblGameOver";
             this.LblGameOver.Size = new System.Drawing.Size(145, 29);
             this.LblGameOver.TabIndex = 2;

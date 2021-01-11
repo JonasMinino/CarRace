@@ -15,12 +15,14 @@ namespace CarRace
         public Form1()
         {
             InitializeComponent();
-        }
+            LblGameOver.Visible = false;
+                    }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             moveLine(2);
             moveEnemy(2);
+            GameOver();
         }
         /// <summary>
         /// Adds movement to the center lanes to a specific speed. 
@@ -75,6 +77,18 @@ namespace CarRace
                 case Keys.Down:
                     if (mainCar.Bottom < 357) mainCar.Top+=speed;
                     break;
+            }
+        }
+        /// <summary>
+        /// Game stops when there's a collision. 
+        /// </summary>
+        private void GameOver()
+        {
+            if(mainCar.Bounds.IntersectsWith(enemy1.Bounds) ||
+                mainCar.Bounds.IntersectsWith(enemy2.Bounds))
+            {
+                timer1.Enabled = false;
+                LblGameOver.Visible = true;
             }
         }
     }
