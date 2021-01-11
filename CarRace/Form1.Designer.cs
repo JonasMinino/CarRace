@@ -41,6 +41,7 @@ namespace CarRace
             this.mainCar = new System.Windows.Forms.PictureBox();
             this.enemy1 = new System.Windows.Forms.PictureBox();
             this.enemy2 = new System.Windows.Forms.PictureBox();
+            this.LblGameOver = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -155,12 +156,24 @@ namespace CarRace
             this.enemy2.TabIndex = 1;
             this.enemy2.TabStop = false;
             // 
+            // LblGameOver
+            // 
+            this.LblGameOver.AutoSize = true;
+            this.LblGameOver.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblGameOver.Location = new System.Drawing.Point(75, 145);
+            this.LblGameOver.Name = "LblGameOver";
+            this.LblGameOver.Size = new System.Drawing.Size(145, 29);
+            this.LblGameOver.TabIndex = 2;
+            this.LblGameOver.Text = "Game Over";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(284, 361);
+            this.Controls.Add(this.LblGameOver);
             this.Controls.Add(this.enemy2);
             this.Controls.Add(this.enemy1);
             this.Controls.Add(this.mainCar);
@@ -185,6 +198,7 @@ namespace CarRace
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -201,6 +215,7 @@ namespace CarRace
         private System.Windows.Forms.PictureBox mainCar;
         private System.Windows.Forms.PictureBox enemy1;
         private System.Windows.Forms.PictureBox enemy2;
+        private System.Windows.Forms.Label LblGameOver;
     }
 }
 
