@@ -21,7 +21,10 @@ namespace CarRace
         {
             moveLine(2);
         }
-
+        /// <summary>
+        /// Adds movement to the center lanes to a specific speed. 
+        /// </summary>
+        /// <param name="speed"></param>
         public void moveLine(int speed)
         {
             if (pictureBox1.Top >= 400) pictureBox1.Top = 0;
