@@ -58,9 +58,8 @@ namespace CarRace
                     if (mainCar.Top > 0) mainCar.Top-=speed;
                     break;
                 case Keys.Down:
-                    if (mainCar.Bottom < 395) mainCar.Top+=speed;
+                    if (mainCar.Bottom < 357) mainCar.Top+=speed;
                     break;
-
             }
         }
     }
