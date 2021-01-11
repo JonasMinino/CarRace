@@ -43,6 +43,9 @@ namespace CarRace
             this.enemy1 = new System.Windows.Forms.PictureBox();
             this.enemy2 = new System.Windows.Forms.PictureBox();
             this.LblGameOver = new System.Windows.Forms.Label();
+            this.coin1 = new System.Windows.Forms.PictureBox();
+            this.coin2 = new System.Windows.Forms.PictureBox();
+            this.coin3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -53,6 +56,9 @@ namespace CarRace
             ((System.ComponentModel.ISupportInitialize)(this.mainCar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -169,12 +175,45 @@ namespace CarRace
             this.LblGameOver.TabIndex = 2;
             this.LblGameOver.Text = "Game Over";
             // 
+            // coin1
+            // 
+            this.coin1.Image = global::CarRace.Properties.Resources.coin;
+            this.coin1.Location = new System.Drawing.Point(184, 257);
+            this.coin1.Name = "coin1";
+            this.coin1.Size = new System.Drawing.Size(27, 26);
+            this.coin1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coin1.TabIndex = 3;
+            this.coin1.TabStop = false;
+            // 
+            // coin2
+            // 
+            this.coin2.Image = global::CarRace.Properties.Resources.coin;
+            this.coin2.Location = new System.Drawing.Point(114, 125);
+            this.coin2.Name = "coin2";
+            this.coin2.Size = new System.Drawing.Size(27, 26);
+            this.coin2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coin2.TabIndex = 3;
+            this.coin2.TabStop = false;
+            // 
+            // coin3
+            // 
+            this.coin3.Image = global::CarRace.Properties.Resources.coin;
+            this.coin3.Location = new System.Drawing.Point(29, 62);
+            this.coin3.Name = "coin3";
+            this.coin3.Size = new System.Drawing.Size(27, 26);
+            this.coin3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coin3.TabIndex = 3;
+            this.coin3.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(284, 361);
+            this.Controls.Add(this.coin3);
+            this.Controls.Add(this.coin2);
+            this.Controls.Add(this.coin1);
             this.Controls.Add(this.LblGameOver);
             this.Controls.Add(this.enemy2);
             this.Controls.Add(this.enemy1);
@@ -199,6 +238,9 @@ namespace CarRace
             ((System.ComponentModel.ISupportInitialize)(this.mainCar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,6 +260,9 @@ namespace CarRace
         private System.Windows.Forms.PictureBox enemy1;
         private System.Windows.Forms.PictureBox enemy2;
         private System.Windows.Forms.Label LblGameOver;
+        private System.Windows.Forms.PictureBox coin1;
+        private System.Windows.Forms.PictureBox coin2;
+        private System.Windows.Forms.PictureBox coin3;
     }
 }
 
