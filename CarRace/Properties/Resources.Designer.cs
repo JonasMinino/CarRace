@@ -63,9 +63,9 @@ namespace CarRace.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap purpleCar {
+        internal static System.Drawing.Bitmap blueCar {
             get {
-                object obj = ResourceManager.GetObject("purpleCar", resourceCulture);
+                object obj = ResourceManager.GetObject("blueCar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -76,16 +76,6 @@ namespace CarRace.Properties {
         internal static System.Drawing.Bitmap redCar {
             get {
                 object obj = ResourceManager.GetObject("redCar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap whiteCar {
-            get {
-                object obj = ResourceManager.GetObject("whiteCar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

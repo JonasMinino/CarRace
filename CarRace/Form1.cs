@@ -40,6 +40,7 @@ namespace CarRace
         }
         /// <summary>
         /// Adds movement to the main car object at a specific speed;
+        /// Limits the movement to the playing area.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
