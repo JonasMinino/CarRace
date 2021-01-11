@@ -42,11 +42,13 @@ namespace CarRace
             this.mainCar = new System.Windows.Forms.PictureBox();
             this.enemy1 = new System.Windows.Forms.PictureBox();
             this.enemy2 = new System.Windows.Forms.PictureBox();
-            this.LblGameOver = new System.Windows.Forms.Label();
             this.coin1 = new System.Windows.Forms.PictureBox();
             this.coin2 = new System.Windows.Forms.PictureBox();
             this.coin3 = new System.Windows.Forms.PictureBox();
             this.lblScore = new System.Windows.Forms.Label();
+            this.pnlGameOver = new System.Windows.Forms.Panel();
+            this.lblGameOver = new System.Windows.Forms.Label();
+            this.btnStart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -60,6 +62,7 @@ namespace CarRace
             ((System.ComponentModel.ISupportInitialize)(this.coin1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin3)).BeginInit();
+            this.pnlGameOver.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -164,18 +167,6 @@ namespace CarRace
             this.enemy2.TabIndex = 1;
             this.enemy2.TabStop = false;
             // 
-            // LblGameOver
-            // 
-            this.LblGameOver.AutoSize = true;
-            this.LblGameOver.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.LblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGameOver.ForeColor = System.Drawing.Color.Red;
-            this.LblGameOver.Location = new System.Drawing.Point(66, 154);
-            this.LblGameOver.Name = "LblGameOver";
-            this.LblGameOver.Size = new System.Drawing.Size(145, 29);
-            this.LblGameOver.TabIndex = 2;
-            this.LblGameOver.Text = "Game Over";
-            // 
             // coin1
             // 
             this.coin1.Image = global::CarRace.Properties.Resources.coin;
@@ -217,17 +208,51 @@ namespace CarRace
             this.lblScore.TabIndex = 4;
             this.lblScore.Text = "Score = 0";
             // 
+            // pnlGameOver
+            // 
+            this.pnlGameOver.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlGameOver.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnlGameOver.Controls.Add(this.btnStart);
+            this.pnlGameOver.Controls.Add(this.lblGameOver);
+            this.pnlGameOver.Location = new System.Drawing.Point(44, 104);
+            this.pnlGameOver.Name = "pnlGameOver";
+            this.pnlGameOver.Size = new System.Drawing.Size(190, 81);
+            this.pnlGameOver.TabIndex = 5;
+            // 
+            // lblGameOver
+            // 
+            this.lblGameOver.AutoSize = true;
+            this.lblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameOver.ForeColor = System.Drawing.Color.Red;
+            this.lblGameOver.Location = new System.Drawing.Point(35, 8);
+            this.lblGameOver.Name = "lblGameOver";
+            this.lblGameOver.Size = new System.Drawing.Size(116, 24);
+            this.lblGameOver.TabIndex = 0;
+            this.lblGameOver.Text = "Game Over";
+            // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.ForeColor = System.Drawing.Color.Yellow;
+            this.btnStart.Location = new System.Drawing.Point(54, 36);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 32);
+            this.btnStart.TabIndex = 1;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(284, 361);
+            this.Controls.Add(this.pnlGameOver);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.coin3);
             this.Controls.Add(this.coin2);
             this.Controls.Add(this.coin1);
-            this.Controls.Add(this.LblGameOver);
             this.Controls.Add(this.enemy2);
             this.Controls.Add(this.enemy1);
             this.Controls.Add(this.mainCar);
@@ -254,6 +279,8 @@ namespace CarRace
             ((System.ComponentModel.ISupportInitialize)(this.coin1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin3)).EndInit();
+            this.pnlGameOver.ResumeLayout(false);
+            this.pnlGameOver.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,11 +299,13 @@ namespace CarRace
         private System.Windows.Forms.PictureBox mainCar;
         private System.Windows.Forms.PictureBox enemy1;
         private System.Windows.Forms.PictureBox enemy2;
-        private System.Windows.Forms.Label LblGameOver;
         private System.Windows.Forms.PictureBox coin1;
         private System.Windows.Forms.PictureBox coin2;
         private System.Windows.Forms.PictureBox coin3;
         private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Panel pnlGameOver;
+        private System.Windows.Forms.Label lblGameOver;
+        private System.Windows.Forms.Button btnStart;
     }
 }
 

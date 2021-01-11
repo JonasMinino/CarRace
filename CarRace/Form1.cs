@@ -135,5 +135,6 @@ namespace CarRace
                 coin3.Location = new Point(x, 0);
             }
         }
+
     }
 }
