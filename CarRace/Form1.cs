@@ -12,13 +12,14 @@ namespace CarRace
 {
     public partial class Form1 : Form
     {
-        Random r = new Random();
+         readonly Random r = new Random();
         int score = 0;
+        Point startLocation = new Point(29, 275);
         public Form1()
         {
             InitializeComponent();
-            LblGameOver.Visible = false;
-                    }
+            pnlGameOver.Visible = false;
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -102,7 +103,7 @@ namespace CarRace
                 mainCar.Bounds.IntersectsWith(enemy2.Bounds))
             {
                 timer1.Enabled = false;
-                LblGameOver.Visible = true;
+                pnlGameOver.Visible = true;
             }
         }
         /// <summary>
@@ -135,6 +136,24 @@ namespace CarRace
                 coin3.Location = new Point(x, 0);
             }
         }
-
+        /// <summary>
+        ///Repositions the main car and colliting enemy car.
+        /// Clears the score.
+        /// Makes game over panel invisible.
+        /// Restarts the game.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            int x = r.Next(17, 246);
+            mainCar.Location = startLocation;
+            if (mainCar.Bounds.IntersectsWith(enemy1.Bounds)) enemy1.Location = new Point(x, 0);
+            if (mainCar.Bounds.IntersectsWith(enemy2.Bounds)) enemy2.Location = new Point(x, 0);
+            pnlGameOver.Visible = false;
+            lblScore.Text = "Score = 0";
+            score = 0;
+            timer1.Enabled = true;            
+        }
     }
 }

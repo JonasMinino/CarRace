@@ -47,8 +47,8 @@ namespace CarRace
             this.coin3 = new System.Windows.Forms.PictureBox();
             this.lblScore = new System.Windows.Forms.Label();
             this.pnlGameOver = new System.Windows.Forms.Panel();
-            this.lblGameOver = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
+            this.lblGameOver = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -219,17 +219,6 @@ namespace CarRace
             this.pnlGameOver.Size = new System.Drawing.Size(190, 81);
             this.pnlGameOver.TabIndex = 5;
             // 
-            // lblGameOver
-            // 
-            this.lblGameOver.AutoSize = true;
-            this.lblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGameOver.ForeColor = System.Drawing.Color.Red;
-            this.lblGameOver.Location = new System.Drawing.Point(35, 8);
-            this.lblGameOver.Name = "lblGameOver";
-            this.lblGameOver.Size = new System.Drawing.Size(116, 24);
-            this.lblGameOver.TabIndex = 0;
-            this.lblGameOver.Text = "Game Over";
-            // 
             // btnStart
             // 
             this.btnStart.BackColor = System.Drawing.Color.DarkOliveGreen;
@@ -241,6 +230,18 @@ namespace CarRace
             this.btnStart.TabIndex = 1;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // lblGameOver
+            // 
+            this.lblGameOver.AutoSize = true;
+            this.lblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameOver.ForeColor = System.Drawing.Color.Red;
+            this.lblGameOver.Location = new System.Drawing.Point(35, 8);
+            this.lblGameOver.Name = "lblGameOver";
+            this.lblGameOver.Size = new System.Drawing.Size(116, 24);
+            this.lblGameOver.TabIndex = 0;
+            this.lblGameOver.Text = "Game Over";
             // 
             // Form1
             // 
