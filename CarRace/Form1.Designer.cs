@@ -40,7 +40,6 @@ namespace CarRace
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.mainCar = new System.Windows.Forms.PictureBox();
             this.enemy1 = new System.Windows.Forms.PictureBox();
-            this.enemy3 = new System.Windows.Forms.PictureBox();
             this.enemy2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -51,7 +50,6 @@ namespace CarRace
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainCar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemy3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,23 +137,12 @@ namespace CarRace
             // 
             this.enemy1.BackColor = System.Drawing.Color.Transparent;
             this.enemy1.Image = global::CarRace.Properties.Resources.redCar;
-            this.enemy1.Location = new System.Drawing.Point(74, 142);
+            this.enemy1.Location = new System.Drawing.Point(71, 177);
             this.enemy1.Name = "enemy1";
             this.enemy1.Size = new System.Drawing.Size(38, 56);
             this.enemy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.enemy1.TabIndex = 1;
             this.enemy1.TabStop = false;
-            // 
-            // enemy3
-            // 
-            this.enemy3.BackColor = System.Drawing.Color.Transparent;
-            this.enemy3.Image = global::CarRace.Properties.Resources.redCar;
-            this.enemy3.Location = new System.Drawing.Point(211, 217);
-            this.enemy3.Name = "enemy3";
-            this.enemy3.Size = new System.Drawing.Size(38, 56);
-            this.enemy3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.enemy3.TabIndex = 1;
-            this.enemy3.TabStop = false;
             // 
             // enemy2
             // 
@@ -173,9 +160,8 @@ namespace CarRace
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(282, 356);
+            this.ClientSize = new System.Drawing.Size(284, 361);
             this.Controls.Add(this.enemy2);
-            this.Controls.Add(this.enemy3);
             this.Controls.Add(this.enemy1);
             this.Controls.Add(this.mainCar);
             this.Controls.Add(this.pictureBox7);
@@ -197,7 +183,6 @@ namespace CarRace
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainCar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enemy3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).EndInit();
             this.ResumeLayout(false);
 
@@ -215,7 +200,6 @@ namespace CarRace
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox mainCar;
         private System.Windows.Forms.PictureBox enemy1;
-        private System.Windows.Forms.PictureBox enemy3;
         private System.Windows.Forms.PictureBox enemy2;
     }
 }
