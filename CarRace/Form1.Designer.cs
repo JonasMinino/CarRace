@@ -210,12 +210,12 @@ namespace CarRace
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.ForeColor = System.Drawing.Color.Gold;
+            this.lblScore.ForeColor = System.Drawing.Color.Yellow;
             this.lblScore.Location = new System.Drawing.Point(12, 9);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(76, 20);
+            this.lblScore.Size = new System.Drawing.Size(86, 20);
             this.lblScore.TabIndex = 4;
-            this.lblScore.Text = "Score=0";
+            this.lblScore.Text = "Score = 0";
             // 
             // Form1
             // 

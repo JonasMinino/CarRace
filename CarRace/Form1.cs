@@ -13,6 +13,7 @@ namespace CarRace
     public partial class Form1 : Form
     {
         Random r = new Random();
+        int score = 0;
         public Form1()
         {
             InitializeComponent();
@@ -24,7 +25,8 @@ namespace CarRace
             MoveLine(2);
             MoveEnemy(2);
             MoveCoin(2);
-            //GameOver();
+            CoinCollection();
+            GameOver();
         }
         /// <summary>
         /// Adds movement to the center lanes to a specific speed. 
@@ -101,6 +103,36 @@ namespace CarRace
             {
                 timer1.Enabled = false;
                 LblGameOver.Visible = true;
+            }
+        }
+        /// <summary>
+        /// Changes the score of the game when a coin is collected.
+        /// Changes the position of the interesected coin. 
+        /// </summary>
+        private void CoinCollection()
+        {
+            if (mainCar.Bounds.IntersectsWith(coin1.Bounds))
+            {
+                score++;
+                lblScore.Text = "Score = " + score;
+                int x = r.Next(17, 246);
+                coin1.Location = new Point(x, 0);
+            }
+
+            if (mainCar.Bounds.IntersectsWith(coin2.Bounds))
+            {
+                score++;
+                lblScore.Text = "Score = " + score;
+                int x = r.Next(17, 246);
+                coin2.Location = new Point(x, 0);
+            }
+
+            if (mainCar.Bounds.IntersectsWith(coin3.Bounds))
+            {
+                score++;
+                lblScore.Text = "Score = " + score;
+                int x = r.Next(17, 246);
+                coin3.Location = new Point(x, 0);
             }
         }
     }
