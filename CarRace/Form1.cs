@@ -12,6 +12,7 @@ namespace CarRace
 {
     public partial class Form1 : Form
     {
+        Random r = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -20,15 +21,16 @@ namespace CarRace
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            moveLine(2);
-            moveEnemy(2);
-            GameOver();
+            MoveLine(2);
+            MoveEnemy(2);
+            MoveCoin(2);
+            //GameOver();
         }
         /// <summary>
         /// Adds movement to the center lanes to a specific speed. 
         /// </summary>
         /// <param name="speed"></param>
-        public void moveLine(int speed)
+        public void MoveLine(int speed)
         {
             if (pictureBox1.Top >= 400) pictureBox1.Top = 0;
             else pictureBox1.Top += speed;
@@ -45,14 +47,24 @@ namespace CarRace
         /// Adds movement to the enemy objects.
         /// </summary>
         /// <param name="speed"></param>
-        public void moveEnemy(int speed)
+        public void MoveEnemy(int speed)
         {
-            Random r = new Random();
             int x = r.Next(17, 246);
             if (enemy1.Top >= 400) enemy1.Location = new Point(x,0);
             else enemy1.Top += speed;
             if (enemy2.Top >= 400) enemy2.Location = new Point(x, 0);
             else enemy2.Top += speed;           
+        }
+
+        public void MoveCoin(int speed)
+        {
+            int x = r.Next(17, 246);
+            if (coin1.Top >= 400) coin1.Location = new Point(x, 0);
+            else coin1.Top += speed;
+            if (coin2.Top >= 400) coin2.Location = new Point(x, 0);
+            else coin2.Top += speed;
+            if (coin3.Top >= 400) coin3.Location = new Point(x, 0);
+            else coin3.Top += speed;
         }
         /// <summary>
         /// Adds movement to the main car object at a specific speed;

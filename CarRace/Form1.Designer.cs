@@ -46,6 +46,7 @@ namespace CarRace
             this.coin1 = new System.Windows.Forms.PictureBox();
             this.coin2 = new System.Windows.Forms.PictureBox();
             this.coin3 = new System.Windows.Forms.PictureBox();
+            this.lblScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -205,12 +206,24 @@ namespace CarRace
             this.coin3.TabIndex = 3;
             this.coin3.TabStop = false;
             // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.Color.Gold;
+            this.lblScore.Location = new System.Drawing.Point(12, 9);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(76, 20);
+            this.lblScore.TabIndex = 4;
+            this.lblScore.Text = "Score=0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(284, 361);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.coin3);
             this.Controls.Add(this.coin2);
             this.Controls.Add(this.coin1);
@@ -263,6 +276,7 @@ namespace CarRace
         private System.Windows.Forms.PictureBox coin1;
         private System.Windows.Forms.PictureBox coin2;
         private System.Windows.Forms.PictureBox coin3;
+        private System.Windows.Forms.Label lblScore;
     }
 }
 
