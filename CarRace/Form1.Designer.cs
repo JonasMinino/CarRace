@@ -38,6 +38,7 @@ namespace CarRace
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.mainCar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -45,6 +46,7 @@ namespace CarRace
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainCar)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -95,7 +97,7 @@ namespace CarRace
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox6.Location = new System.Drawing.Point(2, -4);
+            this.pictureBox6.Location = new System.Drawing.Point(-1, -4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(10, 384);
             this.pictureBox6.TabIndex = 0;
@@ -116,12 +118,24 @@ namespace CarRace
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // mainCar
+            // 
+            this.mainCar.BackColor = System.Drawing.Color.Transparent;
+            this.mainCar.Image = global::CarRace.Properties.Resources.redCar;
+            this.mainCar.Location = new System.Drawing.Point(29, 275);
+            this.mainCar.Name = "mainCar";
+            this.mainCar.Size = new System.Drawing.Size(38, 56);
+            this.mainCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.mainCar.TabIndex = 1;
+            this.mainCar.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(247, 356);
+            this.Controls.Add(this.mainCar);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -131,6 +145,7 @@ namespace CarRace
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Car Race";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -138,6 +153,7 @@ namespace CarRace
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainCar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -152,6 +168,7 @@ namespace CarRace
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox mainCar;
     }
 }
 

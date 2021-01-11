@@ -38,5 +38,30 @@ namespace CarRace
             if (pictureBox5.Top >= 400) pictureBox5.Top = 0;
             else pictureBox5.Top += speed;            
         }
+        /// <summary>
+        /// Adds movement to the main car object at a specific speed;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            int speed = 3;
+            switch (e.KeyCode)
+            {
+                case Keys.Right:
+                    if(mainCar.Right<pictureBox7.Left) mainCar.Left+=speed;
+                    break;
+                case Keys.Left:
+                    if (mainCar.Left>pictureBox6.Right) mainCar.Left-=speed;
+                    break;
+                case Keys.Up:
+                    if (mainCar.Top > 0) mainCar.Top-=speed;
+                    break;
+                case Keys.Down:
+                    if (mainCar.Bottom < 395) mainCar.Top+=speed;
+                    break;
+
+            }
+        }
     }
 }
