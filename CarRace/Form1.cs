@@ -153,7 +153,7 @@ namespace CarRace
             pnlGameOver.Visible = false;
             lblScore.Text = "Score = 0";
             score = 0;
-            timer1.Enabled = true;      
+            timer1.Enabled = true;            
         }
     }
 }
